@@ -28,8 +28,8 @@ GIT Homework 1
 	$ vim new2.txt
  13. Отредактировать содержание файла “new2.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
 	$ vim new2.json
- 14. Добавить и закоммитить “new2.txt” одной строчкой. --- $ git commit new2.txt -m "Add modified new2.txt file" 
- 15. Добавить и закоммитить “new2.json” одной строчкой. --- $ git commit new2.json -m "Add modified new2.json file"
+ 14. Добавить и закоммитить “new2.txt” одной строчкой. --- $ git add . && git commit new2.txt -m "Add modified new2.txt file" 
+ 15. Добавить и закоммитить “new2.json” одной строчкой. --- $ git add .&& git commit new2.json -m "Add modified new2.json file"
 {
 	"Full name": "Dymusha Mykhailo Alexandrovich",
 	"City": "Kharkiv",
