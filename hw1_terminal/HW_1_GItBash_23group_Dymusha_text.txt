@@ -1,0 +1,81 @@
+Linux terminal (GitBash) commands
+1) Посмотреть, где я --- pwd
+2) Создать папку --- mkdir homework
+3) Зайти в папку --- cd homework
+4) Создать 3 папки --- mkdir A{01..03}
+5) Зайти в любую папку cd A01
+6) Создать 5 файлов (3 txt, 2 json) --- touch textfile{01..03}.txt
+				     	       --- touch  jsonfile{01..02}.json
+7) Создать 3 папки --- mkdir B{01..03}
+8. Вывести список содержимого папки --- ls -la
+$ ls -la
+total 4
+drwxr-xr-x 1 dimus 197609 0 Oct  1 19:45 ./
+drwxr-xr-x 1 dimus 197609 0 Oct  1 19:12 ../
+drwxr-xr-x 1 dimus 197609 0 Oct  1 19:45 B01/
+drwxr-xr-x 1 dimus 197609 0 Oct  1 19:45 B02/
+drwxr-xr-x 1 dimus 197609 0 Oct  1 19:45 B03/
+-rw-r--r-- 1 dimus 197609 0 Oct  1 19:37 jsonfile01.json
+-rw-r--r-- 1 dimus 197609 0 Oct  1 19:37 jsonfile02.json
+-rw-r--r-- 1 dimus 197609 0 Oct  1 19:37 textfile01.txt
+-rw-r--r-- 1 dimus 197609 0 Oct  1 19:37 textfile02.txt
+-rw-r--r-- 1 dimus 197609 0 Oct  1 19:37 textfile03.txt
+
+9) + Открыть любой txt файл --- vim textfile01.txt
+10) + написать туда что-нибудь, любой текст. Нажать “i” => вводить текст. 
+11) + сохранить и выйти. Esc =>: wq (w – сохранение, q - выход).
+12) Выйти из папки на уровень выше --- “cd ..” 
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+	$ mv textfile01.txt jsonfile01.json B02
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+	$ cp jsonfile02.json textfile03.txt  B03
+
+15) Найти файл по имени
+$ find . -name textfile02.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+	$ grep -b "last" textfile02.txt
+17) вывести несколько первых строк из текстового файла
+$ head -2 textfile02.txt
+
+
+18) вывести несколько последних строк из текстового файла
+	$ tail -3 textfile02.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+$ less --LINE-NUMBERS textfile02.txt
+
+
+
+20) вывести дату и время --- выберем несколько полезных вариантов:
+			        --- date – текущая дата (Fri Oct 1 22:27:11 2021)
+				Узнаем когда пройдет следующее занятие у 23ей группы :)
+				date --date =”monday” +%F (2021-10-04) 
+=========
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+(cUrl?)
+$ curl http://162.55.220.72:5005/terminal-hw-request
+
+
+$ curl 'http://162.55.220.72:5005/get_method?name=mykhailo&age=20'
+
+
+2) Написать скрипт, который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13.
+Пишем скрипт в текстовом файле (прилагается).
+#!/bin/bash
+cd /d/Me/homework
+mkdir C{01..03}
+cd C03
+touch autotextfile{01..03}.txt
+touch autojsonfile{01..02}.json
+mkdir D{01..03}
+ls -la
+mv autotextfile01.txt autotextfile02.txt D03
+Делаем текстовый файл выполняемым: chmod u+x automation_script.txt.
+Запускаем: ./automation_script.txt.
+ 
+
