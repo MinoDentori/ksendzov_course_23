@@ -30,9 +30,25 @@ GIT Homework 1
 	$ vim new2.json
  14. Добавить и закоммитить “new2.txt” одной строчкой. --- $ git commit new2.txt -m "Add modified new2.txt file" 
  15. Добавить и закоммитить “new2.json” одной строчкой. --- $ git commit new2.json -m "Add modified new2.json file"
+{
+	"Full name": "Dymusha Mykhailo Alexandrovich",
+	"City": "Kharkiv",
+	"Age": 20,
+	"Pets": 1,
+	"Desired salary": "400$",
+}
+
  16. Отправить изменения на внешний репозиторий. --- $ git push
  17. Отредактировать содерgжание файла “new2.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
 	$ vim new2.xml
+<Me>
+	<FullName>Dymusha Mykhailo Alexandrovich</FullName>
+	<City>Kharkiv</City>
+	<Age>20</Age>
+	<Pets>1</Pets>
+	<DesiredSalary>400$</DesiredSalary>
+</Me>
+
  18. Добавить и закоммитить “new2.xml” одной строчкой. --- $ git commit new2.xml -m "Add modified new2.xml file"
  19. Отправить изменения на внешний репозиторий. --- $ git push
  20. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий.
@@ -51,11 +67,37 @@ GIT Homework 1
  24. Синхронизировать внешний и локальный репозитории (слить изменения с внешнего репозитория)  --- $ git pull
  25. Отредактировать в веб интерфейсе содержание файла “new2.json” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате JSON.
 	hw1_git => new2.json => Edit this file
+{
+	"Full name": "Dymusha Mykhailo Alexandrovich",
+	"City": "Kharkiv",
+	"Age": 20,
+	"Pets": 1,
+	"Desired salary": "400$",
+	"Film": "A sound of Thunder",
+	"Show": "The Big Bang Theory",
+	"Food": "Rice balls with tuna",
+	"Season": "Spring",
+	"County": "England"
+}
+
  26. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
 	Commit direcltly to the main branch => Commit changes
  27. Синхронизировать внешний и локальный репозитории --- $ git pull
  28. Отредактировать в веб интерфейсе содержание файла “new2.xml” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате XML.
 	hw1_git => new2.xml => Edit this file
+<Me>
+	<FullName>Dymusha Mykhailo Alexandrovich</FullName>
+	<City>Kharkiv</City>
+	<Age>20</Age>
+	<Pets>1</Pets>
+	<DesiredSalary>400$</DesiredSalary>
+	<Film>A sound of Thunder</Film>
+	<Show>The Big Bang Theory</Show>
+	<Food>Rice balls with tuna</Food>
+	<Season>Spring</Season>
+	<Country>England</Country>
+</Me>
+
  29. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
 	Commit direcltly to the main branch => Commit changes
  30. Синхронизировать внешний и локальный репозитории  --- $ git pull
